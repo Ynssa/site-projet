@@ -20,18 +20,40 @@
 </header>
 
 <main>
-    <h2>Vue d’ensemble</h2>
+    <h2>Contexte physique et scientifique</h2>
+
     <p>
-        Ce site présente un projet de calcul haute performance consacré
-        à la modélisation et la simulation numérique d’écoulements de films
-        minces, pour une application au dégivrage aéronautique.
+        Le givrage en vol constitue un enjeu majeur pour la sécurité
+        aéronautique. Lorsqu’un avion traverse des nuages froids
+        contenant des gouttelettes d’eau surfondue, celles-ci peuvent
+        impacter les surfaces et geler partiellement ou totalement.
     </p>
 
     <p>
-        L’accent est mis sur les méthodes numériques pour les lois de
-        conservation et l'implémentation parallèle du code.
+        Dans certaines conditions, l’eau ne gèle pas immédiatement
+        et forme un film liquide mince qui s’écoule le long de la surface.
+        Ce phénomène, appelé <em>runback</em>, peut conduire à une
+        formation de glace en aval de la zone d’impact initiale,
+        modifiant la géométrie de l’aile et les forces aérodynamiques.
+    </p>
+
+    <p>
+        La modélisation de ces écoulements repose sur l’hypothèse de film
+        mince, dans laquelle l’épaisseur du film est très faible devant
+        les dimensions caractéristiques de la surface.
+        Les grandeurs d’intérêt sont alors l’épaisseur du film et la
+        vitesse moyenne suivant la direction d’écoulement.
+    </p>
+
+    <p>
+        Dans ce projet, ces écoulements sont décrits à l’aide de modèles
+        de type Saint-Venant, enrichis par des termes de viscosité et de
+        tension de surface. Ce cadre permet de capturer les mécanismes
+        dominants tout en restant compatible avec des méthodes numériques
+        de type volumes finis.
     </p>
 </main>
+
 
 <footer>
     <p>Projet CHP : 2025–2026</p>

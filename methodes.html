@@ -20,18 +20,47 @@
 </header>
 
 <main>
-    <h2>Vue d’ensemble</h2>
+    <h2>Cadre numérique et méthodes de résolution</h2>
+
     <p>
-        Ce site présente un projet de calcul haute performance consacré
-        à la modélisation et la simulation numérique d’écoulements de films
-        minces, pour une application au dégivrage aéronautique.
+        Les modèles considérés dans ce projet peuvent être formulés
+        sous la forme de lois de conservation, reliant l’évolution
+        temporelle de variables conservées à des flux physiques
+        et, éventuellement, à des termes sources.
     </p>
 
     <p>
-        L’accent est mis sur les méthodes numériques pour les lois de
-        conservation et l'implémentation parallèle du code.
+        Ce cadre unifié permet de traiter, au sein d’une même
+        implémentation numérique, des problèmes de complexité croissante,
+        allant de l’advection linéaire aux équations d’Euler compressibles,
+        puis aux modèles de films minces de type Saint-Venant.
+    </p>
+
+    <p>
+        La résolution numérique repose sur la méthode des volumes finis,
+        bien adaptée aux lois de conservation et aux écoulements pouvant
+        présenter des discontinuités. Les flux numériques sont évalués
+        aux interfaces des mailles, garantissant la conservation
+        globale des quantités physiques.
+    </p>
+
+    <p>
+        Un schéma de premier ordre basé sur le flux de Rusanov est tout
+        d’abord mis en œuvre, afin de privilégier la robustesse et la
+        stabilité. Ce schéma constitue une base fiable pour la validation
+        du code et l’analyse de convergence.
+    </p>
+
+    <p>
+        Afin d’améliorer la précision en espace et en temps, des schémas
+        d’ordre supérieur sont ensuite introduits, notamment via des
+        reconstructions de type MUSCL et le schéma MUSCL–Hancock.
+        Ces méthodes permettent de réduire la diffusion numérique
+        tout en conservant un bon comportement en présence de gradients
+        marqués.
     </p>
 </main>
+
 
 <footer>
     <p>Projet CHP : 2025–2026</p>
